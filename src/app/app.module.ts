@@ -19,6 +19,7 @@ import { MenuNavTableComponent } from './menu-nav-table/menu-nav-table.component
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
