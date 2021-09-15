@@ -1,0 +1,31 @@
+.tile{
+    color:black;
+        position:relative;
+        width:100vw;
+        height:100vh;
+        background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;}
+    #homepage1{
+        background-color: aqua;
+        background-image:url('../../assets/homepage/porsche1.jpg');
+    }
+    #homepage2{
+        background-color: aquamarine;
+        background-image:url('../../assets/homepage/porsche2.jpg');
+        
+    }
+    #homepage3{
+        background-color:lightblue;
+        background-image:url('../../assets/homepage/porsche3.jpg');
+    }
+    #homepage4{
+        background-color: lightgreen;
+        background-image:url('../../assets/homepage/porsche4.jpg');
+    }
+    #homepage5{
+        background-color: lightseagreen;
+        background-image:url('../../assets/homepage/porsche5.jpg');
+    }
+    

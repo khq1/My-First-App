@@ -20,13 +20,17 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatRadioModule } from '@angular/material/radio';
+import { RadioButComponent } from './radio-but/radio-but.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuNavAppComponent,
     MenuNavDashComponent,
-    MenuNavTableComponent
+    MenuNavTableComponent,
+    RadioButComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
