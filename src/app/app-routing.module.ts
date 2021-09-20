@@ -1,6 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-const routes: Routes = [];
+import { HomepageComponent } from './homepage/homepage.component';
+import { MenuNavDashComponent } from './menu-nav-dash/menu-nav-dash.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { PageListComponent } from './page-list/page-list.component';
+import { MenuNavAppComponent } from './menu-nav-app/menu-nav-app.component';
+const routes: Routes = [
+  { path: 'homepage', component: HomepageComponent },
+ 
+  {path: 'app-search-bar',component: SearchBarComponent },
+  {path:'app-page-list',component:PageListComponent},
+  {path:'app-menu-nav-dash',component:MenuNavDashComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

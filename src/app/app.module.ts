@@ -22,7 +22,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatRadioModule } from '@angular/material/radio';
 import { RadioButComponent } from './radio-but/radio-but.component';
 import { HomepageComponent } from './homepage/homepage.component';
-
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { PageListComponent } from './page-list/page-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WikiService } from './wiki.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,9 @@ import { HomepageComponent } from './homepage/homepage.component';
     MenuNavDashComponent,
     MenuNavTableComponent,
     RadioButComponent,
-    HomepageComponent
+    HomepageComponent,
+    SearchBarComponent,
+    PageListComponent
   ],
   imports: [
     BrowserModule,
@@ -47,9 +52,11 @@ import { HomepageComponent } from './homepage/homepage.component';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule,MatRadioModule
+    MatSortModule,
+    MatRadioModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [WikiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
