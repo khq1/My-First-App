@@ -26,6 +26,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { PageListComponent } from './page-list/page-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WikiService } from './wiki.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,8 @@ import { WikiService } from './wiki.service';
     RadioButComponent,
     HomepageComponent,
     SearchBarComponent,
-    PageListComponent
+    PageListComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { WikiService } from './wiki.service';
     MatPaginatorModule,
     MatSortModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [WikiService],
   bootstrap: [AppComponent]

@@ -1,12 +1,45 @@
-.tile{
+.full_screen_tile{
     color:black;
         position:relative;
-        width:100vw;
-        height:100vh;
+        width:100%;
+        height:100%;
         background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: blue;}
+
+
+.example-card {
+    max-width: 400px;
+    
+    top:5%;
+    left:5%;
+    
+  }
+  
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .example-card{
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      background-color: rgba( 128, 128, 128, 0.1);;  
+    
+    }
+    .warning {
+      display: none;
+    }
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+
+  }
+.example-image
+{object-fit: cover;
+}
+
+
+
     #homepage1{
         background-color: aqua;
         background-image:url('../../assets/homepage/porsche1.jpg');

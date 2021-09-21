@@ -5,11 +5,11 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#homepage1">homepage1</a>
-      <a mat-list-item href="#homepage2">homepage2</a>
-      <a mat-list-item href="#homepage3">homepage3</a>
-      <a mat-list-item href="#homepage4">homepage4</a>
-      <a mat-list-item href="#homepage5">homepage5</a>
+      <a mat-list-item [routerLink] = "['/']"  fragment="homepage1" routerLinkActive="active">homepage1</a>
+      <a mat-list-item routerLink="/homepage" routerLinkActive="active">homepage2</a>
+      <a mat-list-item routerLink="/homepage" routerLinkActive="active">homepage3</a>
+      <a mat-list-item routerLink="/homepage/4" routerLinkActive="active">homepage4</a>
+      <a mat-list-item routerLink="/homepage/5" routerLinkActive="active">homepage5</a>
     </mat-nav-list>
 <mat-nav-list>
 <app-menu-nav-table>
@@ -29,7 +29,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>khq dashboard</span>
+      <span>khq dashboard of fun</span>
 
       <app-radio-but></app-radio-but>
       
