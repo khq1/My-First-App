@@ -67,7 +67,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     HttpClientModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatDatepickerModule,
+    MatDatepickerModule
   ],
   providers: [WikiService],
   bootstrap: [AppComponent]
