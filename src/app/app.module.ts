@@ -41,8 +41,7 @@ import { ContactComponent } from './contact/contact.component';
     SearchBarComponent,
     PageListComponent,
     PageNotFoundComponent,
-    GridListComponent,
-    ContactComponent
+    GridListComponent
   ],
   imports: [
     BrowserModule,
