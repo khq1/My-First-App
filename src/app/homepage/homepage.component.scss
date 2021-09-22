@@ -1,3 +1,11 @@
+.side-radio-group-custom{
+  position:fixed;
+  right:15px;
+  top:50vh;
+  color:aqua;
+  font-size: 19px;
+  z-index: 1;
+  }
 .full_screen_tile{
     color:black;
         position:relative;
@@ -6,7 +14,8 @@
         background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: blue;}
+    background-color: blue;
+  }
 
 
 .example-card {
@@ -36,28 +45,29 @@
   }
 .example-image
 {object-fit: cover;
+  opacity: 0.9;
 }
 
 
 
-    #homepage1{
+    #john{
         background-color: aqua;
         background-image:url('../../assets/homepage/porsche1.jpg');
     }
-    #homepage2{
+    #more{
         background-color: aquamarine;
         background-image:url('../../assets/homepage/porsche2.jpg');
         
     }
-    #homepage3{
+    #about{
         background-color:lightblue;
         background-image:url('../../assets/homepage/porsche3.jpg');
     }
-    #homepage4{
+    #me{
         background-color: lightgreen;
         background-image:url('../../assets/homepage/porsche4.jpg');
     }
-    #homepage5{
+    #contact{
         background-color: lightseagreen;
         background-image:url('../../assets/homepage/porsche5.jpg');
     }

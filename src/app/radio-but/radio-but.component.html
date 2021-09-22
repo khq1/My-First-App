@@ -1,21 +1,15 @@
 <mat-radio-group class="side-radio-group side-radio-group-custom">
-    
 
-<mat-radio-button labelPosition='before'  value="1" color="accent" routerLink="/homepage" routerLinkActive="active"></mat-radio-button><br>
+    <mat-radio-button labelPosition='before'  value="1" color="accent" (click)="buttonClick('john')"></mat-radio-button><br>
 
-<mat-radio-button value="2" labelPosition='before' color="accent" routerLink="/app-menu-nav-dash" routerLinkActive="active">
+    <mat-radio-button value="2" labelPosition='before' color="accent" (click)="buttonClick('more')"></mat-radio-button><br>
 
-</mat-radio-button><br>
+    <mat-radio-button value="3" labelPosition='before'  color="accent" (click)="buttonClick('about')" 
+    ></mat-radio-button> <br>
 
-<mat-radio-button value="3" labelPosition='before'  color="accent" routerLink="app-menu-nav-table" routerLinkActive="active">
-</mat-radio-button> 
-<br>
-<mat-radio-button value="4" labelPosition='before' color="accent" routerLink="app-grid-list" routerLinkActive="active">
+    <mat-radio-button value="4" labelPosition='before' color="accent" (click)="buttonClick('me')"></mat-radio-button><br>
 
-</mat-radio-button><br>
-<mat-radio-button value="5" labelPosition='before' color="accent" routerLink="app-contact-form" routerLinkActive="active">
-
-</mat-radio-button>
+    <mat-radio-button value="5" labelPosition='before' color="accent" (click)="buttonClick('Contact')"></mat-radio-button>
 
 </mat-radio-group>
 
