@@ -28,7 +28,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { WikiService } from './wiki.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GridListComponent } from './grid-list/grid-list.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,8 @@ import { ContactComponent } from './contact/contact.component';
     SearchBarComponent,
     PageListComponent,
     PageNotFoundComponent,
-    GridListComponent
+    GridListComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +65,9 @@ import { ContactComponent } from './contact/contact.component';
     MatSortModule,
     MatRadioModule,
     HttpClientModule,
-    MatCardModule
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
   ],
   providers: [WikiService],
   bootstrap: [AppComponent]
