@@ -5,18 +5,13 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink] = "['/']"  fragment="homepage1" routerLinkActive="active">homepage1</a>
-      <a mat-list-item routerLink="/homepage" routerLinkActive="active">homepage2</a>
-      <a mat-list-item routerLink="/homepage" routerLinkActive="active">homepage3</a>
-      <a mat-list-item routerLink="/homepage/4" routerLinkActive="active">homepage4</a>
-      <a mat-list-item routerLink="/homepage/5" routerLinkActive="active">homepage5</a>
+      <a mat-list-item routerLink="homepage" routerLinkActive="active">John</a>
+      <a mat-list-item routerLink="app-menu-nav-dash" routerLinkActive="active">Dashboard</a>
+      <a mat-list-item routerLink="app-menu-nav-table" routerLinkActive="active">Table</a>
+      <a mat-list-item routerLink="app-grid-list" routerLinkActive="active">Grid list</a>
+      <a mat-list-item routerLink="dashboard" routerLinkActive="active">homepage5</a>
     </mat-nav-list>
-<mat-nav-list>
-<app-menu-nav-table>
-  
-</app-menu-nav-table>
-  
-</mat-nav-list>
+
 
   </mat-sidenav>
   <mat-sidenav-content>
@@ -29,7 +24,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>khq dashboard of fun</span>
+      <span>"My-First-App" John's Angular Material Portfolio</span>
 
       <app-radio-but></app-radio-but>
       

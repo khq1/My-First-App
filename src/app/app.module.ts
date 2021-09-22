@@ -27,6 +27,8 @@ import { PageListComponent } from './page-list/page-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WikiService } from './wiki.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GridListComponent } from './grid-list/grid-list.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomepageComponent,
     SearchBarComponent,
     PageListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GridListComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
