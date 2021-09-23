@@ -14,7 +14,9 @@ export class HomepageComponent implements OnInit {
   constructor(private router: Router) { }
 
   public buttonClick(fragment: string): void {
-    this.router.navigateByUrl('#' + fragment,)
+    this.router.navigate(['/app-homepage']).then(()=>{
+    window.location.hash=fragment;	
+   });
      {
      
     }
