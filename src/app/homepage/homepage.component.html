@@ -1,6 +1,8 @@
 <mat-radio-group class="side-radio-group side-radio-group-custom">
 
-  <mat-radio-button labelPosition='before'  value="1" color="accent" (click)="buttonClick('john')"></mat-radio-button><br>
+  <mat-radio-button labelPosition='before'  value="1" color="accent" (click)="buttonClick('john')"
+  matTooltip="Info about the action"
+        matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button><br>
 
   <mat-radio-button value="2" labelPosition='before' color="accent" (click)="buttonClick('more')"></mat-radio-button><br>
 
@@ -9,7 +11,7 @@
 
   <mat-radio-button value="4" labelPosition='before' color="accent" (click)="buttonClick('me')"></mat-radio-button><br>
 
-  <mat-radio-button value="5" labelPosition='before' color="accent" (click)="buttonClick('Contact')"></mat-radio-button>
+  <mat-radio-button value="5" labelPosition='before' color="accent" routerLink='/app-homepage' fragment="contact"></mat-radio-button>
 
 </mat-radio-group>
 

@@ -8,13 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-  title = 'angular-fragment';
+  
+ 
 
   constructor(private router: Router) { }
 
   public buttonClick(fragment: string): void {
-    this.router.navigateByUrl('#' + fragment);}
-  ngOnInit(): void {
+    this.router.navigateByUrl('#' + fragment,)
+     {
+     
+    }
+    }ngOnInit() {
   }
-
 }

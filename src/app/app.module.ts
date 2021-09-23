@@ -32,6 +32,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     HttpClientModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatTooltipModule
   ],
   providers: [WikiService],
   bootstrap: [AppComponent]
