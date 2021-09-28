@@ -1,17 +1,21 @@
 <mat-radio-group class="side-radio-group side-radio-group-custom">
 
-  <mat-radio-button labelPosition='before'  value="1" color="accent" (click)="buttonClick('john')"
-  matTooltip="Info about the action"
+  <mat-radio-button labelPosition='before'  value="1" color="accent" (click)="buttonClick('john')" 
+  matTooltip="Hi there, my name is John"
         matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button><br>
 
-  <mat-radio-button value="2" labelPosition='before' color="accent" (click)="buttonClick('more')"></mat-radio-button><br>
+  <mat-radio-button value="2" labelPosition='before' color="accent" (click)="buttonClick('more')" matTooltip="More"
+  matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button><br>
 
   <mat-radio-button value="3" labelPosition='before'  color="accent" (click)="buttonClick('about')" 
-  ></mat-radio-button> <br>
+  matTooltip="About"
+        matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button> <br>
 
-  <mat-radio-button value="4" labelPosition='before' color="accent" (click)="buttonClick('me')"></mat-radio-button><br>
+  <mat-radio-button value="4" labelPosition='before' color="accent" (click)="buttonClick('me')"matTooltip="Me"
+  matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button><br>
 
-  <mat-radio-button value="5" labelPosition='before' color="accent" routerLink='/app-homepage' fragment="contact"></mat-radio-button>
+  <mat-radio-button value="5" labelPosition='before' color="accent" (click)="buttonClick('contact')"matTooltip="Contact"
+  matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button>
 
 </mat-radio-group>
 
