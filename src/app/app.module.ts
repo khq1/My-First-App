@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,10 +21,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatRadioModule } from '@angular/material/radio';
 import { RadioButComponent } from './radio-but/radio-but.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { PageListComponent } from './page-list/page-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { WikiService } from './wiki.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GridListComponent } from './grid-list/grid-list.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -43,8 +39,6 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
     MenuNavTableComponent,
     RadioButComponent,
     HomepageComponent,
-    SearchBarComponent,
-    PageListComponent,
     PageNotFoundComponent,
     GridListComponent,
     ContactFormComponent
@@ -73,7 +67,7 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
     MatTooltipModule,
     CdkAccordionModule
   ],
-  providers: [WikiService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
