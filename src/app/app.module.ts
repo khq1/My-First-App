@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,7 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
     HomepageComponent,
     PageNotFoundComponent,
     GridListComponent,
-    ContactFormComponent
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,9 +66,12 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
     HttpClientModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatDatepickerModule,
     MatTooltipModule,
-    CdkAccordionModule
+    CdkAccordionModule,
+    RouterModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

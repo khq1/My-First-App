@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ExtraOptions, RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MenuNavDashComponent } from './menu-nav-dash/menu-nav-dash.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
