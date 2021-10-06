@@ -14,8 +14,8 @@ const routes: Routes = [
   { path:'app-grid-list', component:GridListComponent},
   { path: 'app-contact-form', component: ContactFormComponent },
   {path:'app-file-upload',component:FileUploadComponent},
-  { path: '',   redirectTo: 'app-homepage', pathMatch: 'full' }, // redirect to `first-component`
-  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
+  { path: '',   redirectTo: '', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '**', component: HomepageComponent },  // Wildcard route for a 404 page
 ];
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
