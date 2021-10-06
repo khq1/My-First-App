@@ -1,0 +1,54 @@
+<mat-radio-group class="side-radio-group side-radio-group-custom">
+
+  <mat-radio-button labelPosition='before'  value="1" color="accent" (click)="buttonClick('john')" 
+  matTooltip="Hi there, my name is John"
+        matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button><br>
+
+  <mat-radio-button value="2" labelPosition='before' color="accent" (click)="buttonClick('more')" matTooltip="More"
+  matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button><br>
+
+  <mat-radio-button value="3" labelPosition='before'  color="accent" (click)="buttonClick('about')" 
+  matTooltip="About"
+        matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button> <br>
+
+  <mat-radio-button value="4" labelPosition='before' color="accent" (click)="buttonClick('me')"matTooltip="Me"
+  matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button><br>
+
+  <mat-radio-button value="5" labelPosition='before' color="accent" (click)="buttonClick('contact')"matTooltip="Contact"
+  matTooltipClass="tooltip-red" matTooltipPosition='left'></mat-radio-button>
+
+</mat-radio-group>
+
+
+<div id="john"
+ class="full_screen_tile">
+ <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>John</mat-card-title>
+      <mat-card-subtitle>President of FutureGreenTech </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-lg-image src='assets/homepage/hitman_main.jpg' alt="John president of FutureGreenTech">
+    <mat-card-content>
+      <p> Hi,<br>
+        I'm John,<br>
+        The Specialist,<br><br>
+        I'm a experienced exploration geologist, with a wide range of interests and passions. I'm contentiously learning and expanding my horizons to fill the void of my natural curiosity.I'm a experienced exploration geologist, with a wide range of interests and passions. I'm continuously learning and expanding my horizons.<br>I'm currently looking for a remote job, preferably Full Stack with Angular or in R&D for Aerospace or Automotive. 
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button>Like</a>
+      <a mat-button>Bio</a>
+      <button mat-button>Contact</button>
+      <button mat-button>Github</button>
+          </mat-card-actions>
+  </mat-card>
+
+
+
+
+</div>
+<div id="more" class="full_screen_tile"><mat-card-title>More</mat-card-title></div>
+<div id="about" class="full_screen_tile"><mat-card-title>About</mat-card-title></div>
+<div id="me" class="full_screen_tile"><mat-card-title>Me</mat-card-title></div>
+<div id="contact" class="full_screen_tile"><mat-card-title>Contact</mat-card-title></div>

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-menu-nav-app',
@@ -16,6 +17,12 @@ export class MenuNavAppComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver,
+    private route: ActivatedRoute,) {}
 
-}
+name='';
+    ngOnInit() {
+      this.route.queryParams.subscribe(params => {
+        this.name = params['name'];
+      });
+    }}

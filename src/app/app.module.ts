@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,13 +20,35 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatRadioModule } from '@angular/material/radio';
+import { RadioButComponent } from './radio-but/radio-but.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GridListComponent } from './grid-list/grid-list.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuNavAppComponent,
     MenuNavDashComponent,
-    MenuNavTableComponent
+    MenuNavTableComponent,
+    RadioButComponent,
+    HomepageComponent,
+    PageNotFoundComponent,
+    GridListComponent,
+    ContactFormComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +65,18 @@ import { MatRadioModule } from '@angular/material/radio';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule,MatRadioModule
+    MatSortModule,
+    MatRadioModule,
+    HttpClientModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatTooltipModule,
+    CdkAccordionModule,
+    RouterModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

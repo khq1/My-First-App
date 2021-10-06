@@ -1,0 +1,26 @@
+.container{
+  display:inline-block;
+  width: 80vw;
+  height: 100vh;
+  margin:auto;
+  padding:1%;
+ 
+}
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description,
+.example-headers-align .mat-expansion-panel-body
+ {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-form-field {
+  margin-left: 8px;
+  justify-content: center;
+  align-items: center;
+
+}

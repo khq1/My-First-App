@@ -1,0 +1,73 @@
+.side-radio-group-custom{
+  position:fixed;
+  right:15px;
+  top:50vh;
+  color:aqua;
+  font-size: 19px;
+  z-index: 1;
+  }
+.tooltip-red{
+    background: #e24e4ece;
+    height: 50px;
+  }
+  
+.full_screen_tile{
+    color:white;
+    position:relative;
+    width:100%;
+    height:100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+    
+
+.example-card {
+   max-width: 400px;
+   height: auto;
+  }
+  
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .example-card{
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      background-color: rgba( 128, 128, 128, 0.1);;  
+    
+    }
+    .warning {
+      display: none;
+    }
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/homepage/hitman_profile.jpg');
+    background-size: cover;
+
+  }
+    #john{
+        background-color: aqua;
+        background-image:url('../../assets/homepage/porsche1.jpg');
+    }
+    #more{
+        background-color: aquamarine;
+        background-image:url('../../assets/homepage/porsche2.jpg');
+        
+    }
+    #about{
+        background-color:lightblue;
+        background-image:url('../../assets/homepage/porsche3.jpg');
+    }
+    #me{
+        background-color: lightgreen;
+        background-image:url('../../assets/homepage/porsche4.jpg');
+    }
+    #contact{
+        background-color: lightseagreen;
+        background-image:url('../../assets/homepage/porsche5.jpg');
+    }
+    
