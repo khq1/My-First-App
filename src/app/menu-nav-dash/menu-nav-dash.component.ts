@@ -1,33 +1,30 @@
-import { Component } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Component, Injectable, ViewChild } from '@angular/core';
+
+import { RecordService } from '../record.service';
+import { Record } from '../record';
 
 @Component({
   selector: 'app-menu-nav-dash',
   templateUrl: './menu-nav-dash.component.html',
   styleUrls: ['./menu-nav-dash.component.scss']
 })
+@Injectable({ providedIn: 'root' })
 export class MenuNavDashComponent {
-  /** Based on the screen size, switch from standard to one column per row */
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
-        ];
-      }
+  records: any;
+  
+  
+  
+  constructor(
+    private RecordService: RecordService,
+   
+  ) {}
 
-      return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
-      ];
-    })
-  );
+  ngOnInit() {
+    this.getRecords();
+    
+  }
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  getRecords(): void {
+    this.RecordService.getRecords().subscribe((records: Record[]) => (this.records = records));
+  }
 }

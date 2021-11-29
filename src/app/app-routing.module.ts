@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+import { MainPageComponent } from './main-page/main-page.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MenuNavDashComponent } from './menu-nav-dash/menu-nav-dash.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -8,14 +9,15 @@ import { GridListComponent } from './grid-list/grid-list.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 const routes: Routes = [
+  { path: 'app-main-page', component: MainPageComponent },
   { path: 'app-homepage', component: HomepageComponent },
   { path: 'app-menu-nav-table', component: MenuNavTableComponent },
-  { path:'app-menu-nav-dash', component:MenuNavDashComponent},
-  { path:'app-grid-list', component:GridListComponent},
+  { path:'app-menu-nav-dash', component:MenuNavDashComponent },
+  { path:'app-grid-list', component:GridListComponent },
   { path: 'app-contact-form', component: ContactFormComponent },
-  {path:'app-file-upload',component:FileUploadComponent},
+  { path:'app-file-upload',component:FileUploadComponent },
   { path: '',   redirectTo: 'app-homepage', pathMatch: 'full' }, // redirect to `first-component`
-  { path: '**', component: HomepageComponent },  // Wildcard route for a 404 page
+  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',

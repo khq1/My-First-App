@@ -1,0 +1,39 @@
+*{background-color: #ffffff;}
+.main-page-container-fluid{
+  width:100%;
+	display:flex;
+	flex-wrap:wrap;
+  flex-direction: column;
+	text-align:center;
+  justify-content: center;
+
+}
+ .main-page-img{
+  
+  max-width: 600px;
+  height: auto;     
+  z-index: 0;
+ 
+  align-self: center;
+    }
+
+  
+
+.main-page-headline {
+    text-align: center;
+      
+    
+  .mat-h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 3rem;
+    
+  }
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+   
+  }
+ }
+

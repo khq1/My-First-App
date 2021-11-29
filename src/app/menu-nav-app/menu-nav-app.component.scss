@@ -1,23 +1,15 @@
+*{
+  z-index: 10;
+}
+
 body{max-height: 100%;
 overflow-y: hidden;
+
 }
 .sidenav-container {
   height: 100%;
 }
 
 .sidenav {
-  width: 200px;
+  width: 40%;
 }
-
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar.mat-primary {
-  position: static;
-  top: 0;
-  z-index: 1;
-  background-color:black;
-}
-
-

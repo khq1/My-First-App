@@ -35,6 +35,9 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import {MatRippleModule} from '@angular/material/core';
+import { RecordService } from './record.service';
 
 
 @NgModule({
@@ -48,7 +51,8 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     PageNotFoundComponent,
     GridListComponent,
     ContactFormComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,7 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     MatPaginatorModule,
     MatSortModule,
     MatRadioModule,
-    HttpClientModule,
+   HttpClientModule,
     MatExpansionModule,
     MatFormFieldModule,
     MatTooltipModule,
@@ -76,9 +80,11 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRippleModule,
+    
   ],
-  providers: [],
+  providers: [HttpClientModule,RecordService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

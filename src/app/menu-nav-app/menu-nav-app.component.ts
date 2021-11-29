@@ -11,14 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MenuNavAppComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-
-  constructor(private breakpointObserver: BreakpointObserver,
-    private route: ActivatedRoute,) {}
+  constructor(private route: ActivatedRoute) {}
 
 name='';
     ngOnInit() {
