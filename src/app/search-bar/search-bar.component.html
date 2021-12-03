@@ -1,0 +1,11 @@
+<form class="search-container">
+    <mat-form-field class="search-form" appearance="fill">
+      <mat-label>Search</mat-label>
+      <input class="search-input" type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let record of filteredRecords | async" [value]="record">
+          {{record.vehicle}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>

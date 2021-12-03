@@ -16,6 +16,7 @@ const routes: Routes = [
   { path:'app-grid-list', component:GridListComponent },
   { path: 'app-contact-form', component: ContactFormComponent },
   { path:'app-file-upload',component:FileUploadComponent },
+  { path:'',component: MenuNavDashComponent },
   { path: '',   redirectTo: 'app-homepage', pathMatch: 'full' }, // redirect to `first-component`
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];

@@ -38,7 +38,9 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import {MatRippleModule} from '@angular/material/core';
 import { RecordService } from './record.service';
-
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,8 @@ import { RecordService } from './record.service';
     GridListComponent,
     ContactFormComponent,
     FileUploadComponent,
-    MainPageComponent
+    MainPageComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
@@ -82,6 +85,9 @@ import { RecordService } from './record.service';
     MatInputModule,
     MatSelectModule,
     MatRippleModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    
     
   ],
   providers: [HttpClientModule,RecordService],
