@@ -8,5 +8,5 @@ export interface Record {
   driver: string,
   date: string,
   notes: string,
-  imageUrl: string
+  imageurl: string
 }

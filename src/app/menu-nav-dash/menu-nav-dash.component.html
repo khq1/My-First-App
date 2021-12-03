@@ -1,29 +1,41 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="1" rowHeight="600px">
+  <h1>Dashboard</h1>
+  <mat-grid-list cols="1" rowHeight="90vh">
     <mat-grid-tile *ngFor="let record of records">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{record.place}} 
-            {{record.time}}
-            {{record.vehicle}}
-            {{record.driver}}
+      <mat-card tabindex="0" class="dashboard-card">
+        <div class="img-wrapper">
+          <img class="card-img" src="{{ record.imageurl }}" alt="{{ record.vehicle }}" />
+
+
+          <mat-card-header class="dashboard-card-header">
+
+            <mat-card-subtitle class="mat-card-position">
+              <h2>Position</h2>
+              <h1>{{ record.place }}</h1>
+              </mat-card-subtitle>  
+              <mat-card-subtitle class="mat-card-time" >
+              <h2>Time</h2>
+              <h1>{{ record.time }}</h1>
+            </mat-card-subtitle>
             
-    {{record.category}}
-{{record.length}}
-{{record.time}}
-{{record.date}}
-{{record.notes}}
-{{record.id}}
-<img src="{{record.imageUrl}}">
 
-          </mat-card-title>
-        </mat-card-header>
+            <mat-card-subtitle class="mat-card-vehicle">
+              <h1>{{ record.vehicle }}</h1></mat-card-subtitle>
+              <mat-card-subtitle class="mat-card-driver">
+              <h1> {{ record.driver }}</h1>
+            </mat-card-subtitle>
 
-        <mat-card-content class="dashboard-card-content">
-          <div>{{record.time}}</div>
-        </mat-card-content>
+            <mat-card-subtitle class="mat-card-misc">
+              
+            <p> <b>{{ record.category }}</b></p>
+              <p> {{ record.length }}</p>
+              <p> <b>{{ record.date }} </b><p>
+              <p> {{ record.notes }}</p>
+              <p> obj ID: {{ record.id }}</p>
+            
+            </mat-card-subtitle>
+            </mat-card-header>
+        </div>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
