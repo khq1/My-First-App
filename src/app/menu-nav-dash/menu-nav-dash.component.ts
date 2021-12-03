@@ -13,7 +13,7 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
 @Injectable({ providedIn: 'root' })
 export class MenuNavDashComponent {
   records: any;
- 
+
   
   
   constructor(

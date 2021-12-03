@@ -1,7 +1,7 @@
 <div class="grid-container">
   <h1>Results:</h1>
   <mat-grid-list cols="2" rowHeight="90vh">
-    <mat-grid-tile *ngFor="let record of records | async">
+    <mat-grid-tile *ngFor="let record of records">
       <mat-card tabindex="0" class="dashboard-card">
         <div class="img-wrapper">
           <img class="card-img" src="{{ record.imageurl }}" alt="{{ record.vehicle }}" />
@@ -22,8 +22,9 @@
              </mat-card-subtitle>
             
             <mat-card-subtitle class="mat-card-vehicle">
-              <h1>{{ record.vehicle }}</h1></mat-card-subtitle>
-              <mat-card-subtitle class="mat-card-driver">
+              <h1>{{ record.vehicle }}</h1>
+            </mat-card-subtitle>
+            <mat-card-subtitle class="mat-card-driver">
               <h1> {{ record.driver }}</h1>
             </mat-card-subtitle>
 
