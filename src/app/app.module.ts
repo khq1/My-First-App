@@ -41,6 +41,8 @@ import { RecordService } from './record.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MessageService} from './message.service';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactFormComponent,
     FileUploadComponent,
     MainPageComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    MessagesComponent 
   ],
   imports: [
     BrowserModule,
@@ -90,7 +93,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     
     
   ],
-  providers: [HttpClientModule,RecordService],
+  providers: [HttpClientModule,RecordService,MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

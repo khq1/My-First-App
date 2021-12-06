@@ -4,6 +4,7 @@ import {Observable, Subject} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map, startWith, switchMap} from 'rxjs/operators';
 import { RecordService } from '../record.service';
 import { Record } from '../record';
+import { Router } from '@angular/router';
 
 
 
@@ -46,7 +47,7 @@ export class SearchBarComponent implements OnInit {
 
   constructor(
     private RecordService: RecordService,
-       
+    private router: Router,
   ) {
     
     this.getRecords();
@@ -56,10 +57,10 @@ export class SearchBarComponent implements OnInit {
   getRecords(): void {
     this.RecordService.getRecords().subscribe((records: Record[]) => (this.records = records));
   }
+  onSubmit(myControl: FormControl){
+    this.router.navigate(['record',myControl.value.search])
+    }
   
-  getFilteredRecords(): void {
-    this.RecordService.getRecords().subscribe((records: Record[]) => (this.records = records));
-  }
 
 
   

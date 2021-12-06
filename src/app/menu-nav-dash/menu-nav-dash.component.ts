@@ -1,9 +1,7 @@
-import { Component, Injectable, ViewChild } from '@angular/core';
-
+import { Component, Injectable } from '@angular/core';
 import { RecordService } from '../record.service';
 import { Record } from '../record';
-import { SelectControlValueAccessor } from '@angular/forms';
-import { SearchBarComponent } from '../search-bar/search-bar.component';
+
 
 @Component({
   selector: 'app-menu-nav-dash',
@@ -13,7 +11,7 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
 @Injectable({ providedIn: 'root' })
 export class MenuNavDashComponent {
   records: any;
-
+ 
   
   
   constructor(

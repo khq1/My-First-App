@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  recordsUrl: 'assets/Nordschleife_lap_times.json'
 };
