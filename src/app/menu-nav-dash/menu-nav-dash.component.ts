@@ -11,15 +11,15 @@ import { Record } from '../record';
 @Injectable({ providedIn: 'root' })
 export class MenuNavDashComponent {
   records: any;
-  colspan: number = 1;
+  colspan: number = 2;
   record: any;
   myControl: any;
   
   OnExpand(){
-    this.colspan = 3;
+    this.colspan = 4;
   }
   OnColapse(){
-    this.colspan = 1 ;
+    this.colspan = 2 ;
   }
   
   constructor(

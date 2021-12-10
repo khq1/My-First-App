@@ -32,14 +32,14 @@
   object-position: center;
   margin: 0 auto;
 }
-.img-wrapper img:hover + mat-card-subtitle {
-  color: #000;
-}
+
 
 .more-button {
   position: absolute;
   top: 5px;
   right: 10px;
+  mix-blend-mode: difference;
+  filter:invert(1);
 }
 
 .dashboard-card-header {
@@ -49,6 +49,7 @@
   right: 16px;
   bottom: 16px;
   padding: 10px;
+  
   h1 {
     font-size: 6vmin;
     line-height: 6vmin;
@@ -58,10 +59,9 @@
       line-height: 3vmin;
     }
     h3 {
-      font-size: 1vmin;
-      line-height: 1vmin;
+      font-size: 1.5vmin;
+      line-height: 2vmin;
     }
-
   
  
 }
@@ -71,14 +71,14 @@ mat-card-subtitle {
   align-self: center; 
   color: white;
 
-  font-weight: 900;
-
+  font-weight: 800;
+z-index: 2;
   :hover{
     background-color:white;
     font-weight: 900;
     
     color: black;
-    z-index: 10;
+    z-index: 110;
     
     
   }
@@ -104,10 +104,12 @@ mat-card-subtitle {
 .mat-card-vehicle {
   left: 10px;
   bottom: 50px;
+  z-index: 3;
 }
 .mat-card-driver {
   left: 10px;
   bottom: 10px;
+  
 }
 
 .mat-card-misc {
