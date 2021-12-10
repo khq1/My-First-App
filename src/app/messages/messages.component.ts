@@ -11,7 +11,7 @@ export class MessagesComponent implements OnInit {
   constructor(public messageService: MessageService) {}
 
   ngOnInit() {
-    this.messageService.add("Message Service: OK");
+    this.messageService.add("Message Service Initialized");
   }
 
 }

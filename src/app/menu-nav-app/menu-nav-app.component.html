@@ -1,9 +1,13 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" mode="over">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="app-main-page" routerLinkActive="active">Main Page</a>
+      <a mat-list-item routerLink="app-main-page" routerLinkActive="active">Main</a>
       <a mat-list-item routerLink="app-homepage" routerLinkActive="active">Home</a>
+
       <a mat-list-item routerLink="app-menu-nav-dash" routerLinkActive="active">Dashboard</a>
       <a mat-list-item routerLink="app-menu-nav-table" routerLinkActive="active">Table</a>
       <a mat-list-item routerLink="app-grid-list" routerLinkActive="active">Grid list</a>
@@ -14,19 +18,22 @@
 
   </mat-sidenav>
   <mat-sidenav-content>
-    
+    <mat-toolbar color="primary">
+      
       <button
-        type="button"
-        aria-label="Toggle Side Menu"
+       mat-button
+        aria-label="Toggle sidenav"
         mat-icon-button
-        (click)="drawer.toggle()">
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+      <span>Nürburgring Nordschleife Record Lap Times</span>
       
+<app-search-bar></app-search-bar>
 
       
-      
-    
+    </mat-toolbar>
     <!-- Add Content Here -->
     <ng-content #ngcontent></ng-content>
     

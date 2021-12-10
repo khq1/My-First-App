@@ -11,7 +11,8 @@ import { Record } from '../record';
 @Injectable({ providedIn: 'root' })
 export class MenuNavDashComponent {
   records: any;
- 
+  colspan="";  
+  rowspan="";
   
   
   constructor(
