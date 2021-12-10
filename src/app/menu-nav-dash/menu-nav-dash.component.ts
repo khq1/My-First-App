@@ -11,7 +11,7 @@ import { Record } from '../record';
 @Injectable({ providedIn: 'root' })
 export class MenuNavDashComponent {
   records: any;
-  colspan: number = 2;
+  colspan: number = 4;
   record: any;
   myControl: any;
   
