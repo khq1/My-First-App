@@ -1,9 +1,8 @@
 .grid-container {
   margin: 0;
-  
+
   font-weight: 800;
 }
-
 
 .dashboard-card {
   position: absolute;
@@ -11,10 +10,15 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
-  max-height: 600px;
-  max-width: 1300px;
+
+  width: 95%;
+  height: 95%;
+  max-height: 1080px;
+  max-width: 1920px;
   margin: 0 auto;
- 
+
+  
+
 }
 .img-wrapper {
   width: 100%;
@@ -28,8 +32,8 @@
   object-position: center;
   margin: 0 auto;
 }
-.img-wrapper img:hover + mat-card-subtitle{
-color: #000;
+.img-wrapper img:hover + mat-card-subtitle {
+  color: #000;
 }
 
 .more-button {
@@ -45,31 +49,47 @@ color: #000;
   right: 16px;
   bottom: 16px;
   padding: 10px;
-
   h1 {
-    font-size: 4vmin;
-    
-  }
-  h2 {
-    font-size: 2.5vmin;
-    
-    
-  }
-  h3 {
-    font-size: 1vmin;
-    
-    
-  }
+    font-size: 6vmin;
+    line-height: 6vmin;
+      }
+    h2 {
+      font-size: 3vmin;
+      line-height: 3vmin;
+    }
+    h3 {
+      font-size: 1vmin;
+      line-height: 1vmin;
+    }
+
+  
+ 
 }
 mat-card-subtitle {
   position: absolute;
-  
-
+  text-align: center;
+  align-self: center; 
   color: white;
+
+  font-weight: 900;
+
+  :hover{
+    background-color:white;
+    font-weight: 900;
+    
+    color: black;
+    z-index: 10;
+    
+    
+  }
 }
+
+
 .mat-card-position {
   left: 10px;
   top: 25px;
+  
+  
 }
 
 .mat-card-time {
@@ -88,13 +108,14 @@ mat-card-subtitle {
 .mat-card-driver {
   left: 10px;
   bottom: 10px;
-  
 }
 
 .mat-card-misc {
   right: 10px;
   bottom: 10px;
   text-align: right;
-  font-size: 16px;
-  width: 40%;
+  line-height: 2px;
+  width: 45%;
+  font-size: 14px;
+
 }

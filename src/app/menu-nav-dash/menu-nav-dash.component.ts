@@ -13,6 +13,7 @@ export class MenuNavDashComponent {
   records: any;
   colspan: number = 1;
   record: any;
+  myControl: any;
   
   OnExpand(){
     this.colspan = 3;
