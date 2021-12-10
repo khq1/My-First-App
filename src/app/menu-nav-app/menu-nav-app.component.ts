@@ -14,6 +14,7 @@ export class MenuNavAppComponent implements OnInit {
     
   constructor(private route: ActivatedRoute,    
       private breakpointObserver: BreakpointObserver) {}
+      
       isHandset$: Observable<boolean> = this.breakpointObserver
       .observe(Breakpoints.Handset)
       .pipe(

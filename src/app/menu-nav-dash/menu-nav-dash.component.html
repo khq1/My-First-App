@@ -1,7 +1,7 @@
 <div class="grid-container">
   <h1>Results:</h1>
   <mat-grid-list cols="3" rowHeight="65vh">
-    <mat-grid-tile class='grid-tile' *ngFor="let record of records" [colspan]="1"  
+    <mat-grid-tile class='grid-tile' *ngFor="let record of records" [colspan]="colspan"  
     >
       <mat-card tabindex="0" class="dashboard-card" mat-elevation-z8>
         <div class="img-wrapper">
@@ -9,7 +9,13 @@
 
 
           <mat-card-header class="dashboard-card-header">
-
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item (click)="OnExpand()">Expand</button>
+              <button mat-menu-item (click)="OnColapse()">Colapse</button>
+            </mat-menu>
             <mat-card-subtitle class="mat-card-position">
               <h2>Position</h2>
               <h1>{{ record.place }}</h1>

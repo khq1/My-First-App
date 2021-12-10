@@ -21,7 +21,7 @@ export class RecordService {
   getRecords(): Observable<Array<Record>> {
     return this.http.get<Array<Record>>(this.recordsUrl);
   }
-  getHeroNo404<Data>(id: number): Observable<Record> {
+  getRecordNo404(id: number): Observable<Record> {
     const url = `${this.recordsUrl}/?id=${id}`;
     return this.http.get<Record[]>(url)
       .pipe(
@@ -35,7 +35,7 @@ export class RecordService {
   }
 
   /** GET hero by id. Will 404 if id not found */
-  getHero(id: number): Observable<Record> {
+  getRecord(id: number): Observable<Record> {
     const url = `${this.recordsUrl}/${id}`;
     return this.http.get<Record>(url).pipe(
       tap(_ => this.log(`fetched record id=${id}`)),
