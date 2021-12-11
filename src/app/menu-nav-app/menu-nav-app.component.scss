@@ -1,5 +1,6 @@
 *{
   z-index: 10;
+  
 }
 
 body{max-height: 100%;
@@ -14,15 +15,15 @@ overflow-y: hidden;
   width: 150px;
 }
 .sidenav .mat-toolbar {
-  font-size: 28px;
+  font-size:xx-large;
     font-weight: bold;
-    line-height: 28px;
+    
     
   background: inherit;
 }
 
 .mat-toolbar.mat-primary {
-  font-size: 1.5vw;
+ 
     font-weight: bold;
     height: 80px;
   position: static;

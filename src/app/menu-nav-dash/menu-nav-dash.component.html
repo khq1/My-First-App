@@ -1,49 +1,74 @@
 <div class="grid-container">
+
   <h1>Results:</h1>
-  <mat-grid-list cols="4" rowHeight="100vh">
-    <mat-grid-tile class='grid-tile' *ngFor="let record of records" [colspan]="colspan"  
-    >
-      <mat-card tabindex="0" class="dashboard-card" mat-elevation-z8>
+  <div class="view_buttons">
+    <mat-icon matbutton class="search-button" (click)="onView1()">square</mat-icon>
+    <mat-icon matbutton class="search-button" (click)="onView2()">apps</mat-icon>
+    <mat-icon matbutton class="search-button" (click)="onView3()">table_rows</mat-icon>
+    <mat-icon matbutton class="search-button" (click)="onView4()">view_column</mat-icon>
+    <mat-icon matbutton class="search-button" (click)="onView5()">view_comfy</mat-icon>
+  </div>
+
+  <mat-grid-list cols="4" rowHeight="30vh">
+
+    <mat-grid-tile class='grid-tile' *ngFor="let record of records" [colspan]="colspan" [rowspan]="rowspan">
+
+      <mat-card tabindex="0" class="dashboard-card">
+
         <div class="img-wrapper">
+
           <img class="card-img" src="{{ record.imageurl }}" alt="{{ record.vehicle }}" />
 
 
-          <mat-card-header class="dashboard-card-header">
+          <div class="dashboard-card-header">
+
             <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+
               <mat-icon>more_vert</mat-icon>
+
             </button>
+
             <mat-menu #menu="matMenu" xPosition="before">
+
               <button mat-menu-item (click)="OnExpand()">Expand</button>
+
               <button mat-menu-item (click)="OnColapse()">Colapse</button>
+
             </mat-menu>
-            <mat-card-subtitle class="mat-card-position">
-              <h2>Position</h2>
+
+            <div class="mat-card mat-card-position">
+              
+              <h2>Pos.</h2>
               <h1>{{ record.place }}</h1>
-              </mat-card-subtitle>  
-              <mat-card-subtitle class="mat-card-time" >
+
+            </div>
+
+            <div class="mat-card mat-card-time">
               <h2>Time</h2>
               <h1>{{ record.time }}</h1>
-            </mat-card-subtitle>
-            <mat-card-subtitle class="mat-card-category" >
-              <h3> {{ record.category }}</h3>
-             </mat-card-subtitle>
-            
-            <mat-card-subtitle class="mat-card-vehicle">
-              <h2>{{ record.vehicle }}</h2>
-            </mat-card-subtitle>
-            <mat-card-subtitle class="mat-card-driver">
-              <h2> {{ record.driver }}</h2>
-            </mat-card-subtitle>
+            </div>
 
-            <mat-card-subtitle class="mat-card-misc">
-              
-            
-            <h3> Date: {{ record.date }}<br>
-              Distance: {{ record.length }}<br>         
-              {{ record.notes }}</h3>
-                 
-            </mat-card-subtitle>
-            </mat-card-header>
+            <div class="mat-card mat-card-category">
+              <h3> {{ record.category }}</h3>
+            </div>
+
+            <div class="mat-card mat-card-vehicle">
+              <h2>{{ record.vehicle }}</h2>
+            </div>
+
+            <div class="mat-card mat-card-driver">
+              <h2> {{ record.driver }}</h2>
+            </div>
+
+            <div class="mat-card mat-card-misc">
+
+              <h3> Date: {{ record.date }}<br>
+                Distance: {{ record.length }}<br>
+                {{ record.notes }}</h3>
+
+            </div>
+
+          </div>
         </div>
       </mat-card>
     </mat-grid-tile>

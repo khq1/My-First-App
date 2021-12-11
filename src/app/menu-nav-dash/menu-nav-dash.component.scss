@@ -1,7 +1,10 @@
+
 .grid-container {
   margin: 0;
 
-  font-weight: 800;
+  .view_buttons {
+    align-self: left;
+  }
 }
 
 .dashboard-card {
@@ -10,15 +13,11 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
-
   width: 95%;
   height: 95%;
   max-height: 1080px;
   max-width: 1920px;
-  margin: 0 auto;
-
-  
-
+  margin: 0;
 }
 .img-wrapper {
   width: 100%;
@@ -33,91 +32,71 @@
   margin: 0 auto;
 }
 
-
 .more-button {
   position: absolute;
   top: 5px;
   right: 10px;
   mix-blend-mode: difference;
-  filter:invert(1);
+  filter: invert(1);
 }
 
 .dashboard-card-header {
-  position: absolute;
   top: 16px;
   left: 16px;
   right: 16px;
   bottom: 16px;
   padding: 10px;
-  
-  h1 {
-    font-size: 6vmin;
-    line-height: 6vmin;
-      }
-    h2 {
-      font-size: 3vmin;
-      line-height: 3vmin;
-    }
-    h3 {
-      font-size: 1.5vmin;
-      line-height: 2vmin;
-    }
-  
- 
-}
-mat-card-subtitle {
-  position: absolute;
+  margin: 0;
   text-align: center;
-  align-self: center; 
-  color: white;
+}
+  .mat-card {
+    position: absolute;
+    text-align: center;
+    align-self: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    max-block-size: auto;
+    font-size: clamp(1rem, 2.5vw, 2rem); 
 
-  font-weight: 800;
-z-index: 2;
-  :hover{
-    background-color:white;
-    font-weight: 900;
-    
-    color: black;
-    z-index: 110;
-    
-    
+    &.mat-card-position {
+      left: 15px;
+      top: 15px;
+    }
+
+    &.mat-card-time {
+      left: 120px;
+      top: 15px;
+    }
+    &.mat-card-category {
+      left: 250px;
+      top: 15px;
+    }
+
+    &.mat-card-vehicle {
+      left: 15px;
+      bottom: 150px;
+    }
+    &.mat-card-driver {
+      left: 15px;
+      bottom: px;
+    }
+
+    &.mat-card-misc {
+      right: 15px;
+      bottom: 15px;
+      width: auto;
+      height: auto;
+      
+      
+    }
   }
-}
 
+.mat-card:hover {
+    z-index: 110;
+    color: rgb(0, 0, 0);
+    background-color: rgb(25, 172, 5);
+    color: #ffff;
+    font-weight: bolder;
+  }
 
-.mat-card-position {
-  left: 10px;
-  top: 25px;
-  
-  
-}
-
-.mat-card-time {
-  left: 160px;
-  top: 33px;
-}
-.mat-card-category {
-  left: 10px;
-  top: 10px;
-}
-
-.mat-card-vehicle {
-  left: 10px;
-  bottom: 50px;
-  z-index: 3;
-}
-.mat-card-driver {
-  left: 10px;
-  bottom: 10px;
-  
-}
-
-.mat-card-misc {
-  right: 10px;
-  bottom: 10px;
-  text-align: right;
-  line-height: 2px;
-  width: 45%;
-  font-size: 14px;
-
-}

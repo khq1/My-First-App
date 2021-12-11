@@ -12,15 +12,40 @@ import { Record } from '../record';
 export class MenuNavDashComponent {
   records: any;
   colspan: number = 4;
+  rowspan: number = 2;
   record: any;
   myControl: any;
   
+  
   OnExpand(){
     this.colspan = 4;
+    this.rowspan = 3;
   }
   OnColapse(){
-    this.colspan = 2 ;
+    this.colspan = 2;
+    this.rowspan = 2;
   }
+  onView1(){
+    this.colspan = 4;
+    this.rowspan = 3;
+  }
+  onView2(){
+    this.colspan = 2;
+    this.rowspan = 2;
+  }
+  onView3(){
+    this.colspan = 4;
+    this.rowspan = 2;
+  }
+  onView4(){
+    this.colspan = 1;
+    this.rowspan = 3;
+  }
+  onView5(){
+    this.colspan = 1;
+    this.rowspan = 1;
+  }
+  
   
   constructor(
     private RecordService: RecordService,

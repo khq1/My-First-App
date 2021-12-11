@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 
 
 
-
 @Injectable({ providedIn: 'root' })
 @Component({
   selector: 'app-search-bar',
