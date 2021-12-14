@@ -1,6 +1,7 @@
 import { Component, Injectable } from '@angular/core';
 import { RecordService } from '../record.service';
 import { Record } from '../record';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 
 @Component({
@@ -8,20 +9,19 @@ import { Record } from '../record';
   templateUrl: './menu-nav-dash.component.html',
   styleUrls: ['./menu-nav-dash.component.scss']
 })
-@Injectable({ providedIn: 'root' })
+
 export class MenuNavDashComponent {
-  records: any;
+  
   colspan: number = 4;
   rowspan: number = 2;
-  record: any;
-  myControl: any;
-  
+  records: Record[] = [];
+ 
   
   OnExpand(){
     this.colspan = 4;
     this.rowspan = 3;
   }
-  OnColapse(){
+  OnCollapse(){
     this.colspan = 2;
     this.rowspan = 2;
   }
@@ -53,10 +53,12 @@ export class MenuNavDashComponent {
   ) {}
 
   ngOnInit() {
+    
     this.getRecords();
     
-  }
 
+
+  }
   getRecords(): void {
     this.RecordService.getRecords().subscribe((records: Record[]) => (this.records = records));
   }

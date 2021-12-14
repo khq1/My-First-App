@@ -16,58 +16,40 @@
       <mat-card tabindex="0" class="dashboard-card">
 
         <div class="img-wrapper">
-
           <img class="card-img" src="{{ record.imageurl }}" alt="{{ record.vehicle }}" />
 
 
-          <div class="dashboard-card-header">
-
+          <div class="dashboard-card-header" >
             <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-
               <mat-icon>more_vert</mat-icon>
-
             </button>
-
             <mat-menu #menu="matMenu" xPosition="before">
-
               <button mat-menu-item (click)="OnExpand()">Expand</button>
-
-              <button mat-menu-item (click)="OnColapse()">Colapse</button>
-
+              <button mat-menu-item (click)="OnCollapse()">Collapse</button>
             </mat-menu>
-
-            <div class="mat-card mat-card-position">
-              
-              <h2>Pos.</h2>
-              <h1>{{ record.place }}</h1>
-
-            </div>
-
-            <div class="mat-card mat-card-time">
-              <h2>Time</h2>
-              <h1>{{ record.time }}</h1>
-            </div>
-
-            <div class="mat-card mat-card-category">
-              <h3> {{ record.category }}</h3>
-            </div>
-
-            <div class="mat-card mat-card-vehicle">
+            <mat-card-title class="mat-card position">
+              <h1>Pos {{ record.place }}</h1>
+              </mat-card-title>  
+              <mat-card-title class="mat-card time" >
+              <h1>Time {{ record.time }}</h1>
+            </mat-card-title>
+            
+            
+            <mat-card-title class="mat-card vehicle">
               <h2>{{ record.vehicle }}</h2>
-            </div>
-
-            <div class="mat-card mat-card-driver">
+            </mat-card-title>
+            <mat-card-title class="mat-card driver">
               <h2> {{ record.driver }}</h2>
-            </div>
+            </mat-card-title>
 
-            <div class="mat-card mat-card-misc">
-
-              <h3> Date: {{ record.date }}<br>
-                Distance: {{ record.length }}<br>
-                {{ record.notes }}</h3>
-
-            </div>
-
+            <mat-card-title class="mat-card misc">
+              
+              <h3>{{ record.category }}
+            {{ record.date }}<br> 
+            {{ record.length }}<br>   
+              {{ record.notes }}</h3>
+                 
+            </mat-card-title>
           </div>
         </div>
       </mat-card>
