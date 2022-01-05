@@ -4,6 +4,7 @@ import { Record } from "./record";
 import { Observable, of } from "rxjs";
 import { tap, catchError, map, } from "rxjs/operators";
 import { MessageService } from './message.service';
+import { environment as env } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -16,13 +17,13 @@ export class RecordService {
     public messageService: MessageService
       ) { }
 
-      private recordsUrl = 'assets/Nordschleife_lap_times.json';
+      
      
   getRecords(): Observable<Array<Record>> {
-    return this.http.get<Array<Record>>(this.recordsUrl);
+    return this.http.get<Array<Record>>(`${env.recordsUrl}`);
   }
   getRecordNo404(id: number): Observable<Record> {
-    const url = `${this.recordsUrl}/?id=${id}`;
+    const url = `${env.recordsUrl}/?id=${id}`;
     return this.http.get<Record[]>(url)
       .pipe(
         map(records => records[0]), // returns a {0|1} element array
@@ -36,7 +37,7 @@ export class RecordService {
 
   /** GET hero by id. Will 404 if id not found */
   getRecord(id: number): Observable<Record> {
-    const url = `${this.recordsUrl}/${id}`;
+    const url = `${env.recordsUrl}/${id}`;
     return this.http.get<Record>(url).pipe(
       tap(_ => this.log(`fetched record id=${id}`)),
       catchError(this.handleError<Record>(`getRecord id=${id}`))
@@ -50,7 +51,7 @@ export class RecordService {
       // if not search record, return empty record array.
       return of([]);
     }
-    return this.http.get<Record[]>(`${this.recordsUrl}/?record=${record}`).pipe(
+    return this.http.get<Record[]>(`${env.recordsUrl}/?record=${record}`).pipe(
       tap(x => x.length ?
          this.log(`found records matching "${record}"`) :
          this.log(`no records matching "${record}"`)),
