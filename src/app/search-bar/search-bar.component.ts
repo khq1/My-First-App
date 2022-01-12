@@ -57,7 +57,7 @@ export class SearchBarComponent implements OnInit {
     this.RecordService.getRecords().subscribe((records: Record[]) => (this.records = records));
   }
   onSubmit(myControl: FormControl){
-    this.router.navigate(['record',myControl.value.search])
+    this.router.navigate(['record', myControl.value.record])
     }
   
 
