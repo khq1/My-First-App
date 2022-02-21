@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'app-contact-form', component: ContactFormComponent },
   { path:'app-file-upload',component:FileUploadComponent },
   { path:'', component: MainPageComponent },
-  { path: '',   redirectTo: 'app-menu-nav-dash', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '',   redirectTo: 'app-main-page', pathMatch: 'full' }, // redirect to `first-component`
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 const routerOptions: ExtraOptions = {

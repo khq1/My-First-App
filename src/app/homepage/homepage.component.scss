@@ -46,7 +46,10 @@
   .example-header-image {
     background-image: url('https://media.autoexpress.co.uk/image/private/s--lzWaTFx0--/f_auto,t_content-image-full-desktop@2/v1605780978/autoexpress/2020/11/Nurburgring%20lap%20times%20record-27.jpg');
     background-size: cover;
-
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   }
     #john{
        

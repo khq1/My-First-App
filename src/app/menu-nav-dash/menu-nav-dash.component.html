@@ -19,7 +19,7 @@
           <img class="card-img" src="{{ record.imageurl }}" alt="{{ record.vehicle }}" />
 
 
-          <div class="dashboard-card-header" >
+          <div class="dashboard-card-header">
             <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
               <mat-icon>more_vert</mat-icon>
             </button>
@@ -27,28 +27,27 @@
               <button mat-menu-item (click)="OnExpand()">Expand</button>
               <button mat-menu-item (click)="OnCollapse()">Collapse</button>
             </mat-menu>
-            <mat-card-title class="mat-card position">
+            <mat-card-title class="position">
               <h1>Pos {{ record.place }}</h1>
               </mat-card-title>  
-              <mat-card-title class="mat-card time" >
+              <mat-card-title class="time" >
               <h1>Time {{ record.time }}</h1>
             </mat-card-title>
             
             
-            <mat-card-title class="mat-card vehicle">
+            <mat-card-title class="vehicle">
               <h2>{{ record.vehicle }}</h2>
             </mat-card-title>
-            <mat-card-title class="mat-card driver">
+            <mat-card-title class="driver">
               <h2> {{ record.driver }}</h2>
             </mat-card-title>
 
-            <mat-card-title class="mat-card misc">
+            <mat-card-title class="misc">
               
               <h3>{{ record.category }}
             {{ record.date }}<br> 
             {{ record.length }}<br>   
-              {{ record.notes }}</h3>
-                 
+              {{ record.notes }}</h3>                 
             </mat-card-title>
           </div>
         </div>
